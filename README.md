@@ -18,6 +18,14 @@ After SynEdit already installed, add file NoteEditorReg.pas to a package and jus
 
 Supports Delphi XE2..Delphi 10.3 Rio
 
+## Hidden Shortcuts
+
+`CTRL+S` = Save Button
+
+`CTRL+ENTER` = OK Button
+
+> Others shortcuts are described on each hint of toolbar buttons
+
 ## Syntax Supported Formats
 
 - 68HC11 Assembler
