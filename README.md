@@ -8,6 +8,8 @@ The NoteEditor supports sintax highlight using SynEdit component (this component
 
 ![Example Image](noteeditor_print.png?raw=true "Example Image")
 
+![Example Colors](noteeditor_colors.png?raw=true "Example Colors")
+
 ## How to install
 
 Add file NoteEditorReg.pas to a package and just Build.
