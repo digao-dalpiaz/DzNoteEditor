@@ -16,7 +16,7 @@ Add file NoteEditorReg.pas to a package and just Build.
 
 You need to get the SynEdit before this. I recomend you to use GetIt in Delphi to download and install the SynEdit automatically. You can get SynEdit here at GitHub too.
 
-## Sintax Supported Formats
+## Syntax Supported Formats
 
 - 68HC11 Assembler
 - ADSP21xx
@@ -74,3 +74,5 @@ You need to get the SynEdit before this. I recomend you to use GetIt in Delphi t
 - Visual Basic
 - Vrml97
 - x86 Assembly
+
+Note: This list is based on last version of SynEdit (date: 01/23/2019). You may have a different list if you install another version. The list is automatically created based on installed syntax highlighters of SynEdit (auto-detected).
