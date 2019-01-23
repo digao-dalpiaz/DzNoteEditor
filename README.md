@@ -10,6 +10,8 @@ The NoteEditor supports syntax highlight using SynEdit component (this component
 
 ![Example Colors](noteeditor_colors.png?raw=true "Example Colors")
 
+All the configurations and customizations are saved at system Registry: HKEY_CURRENT_USER\Digao\NoteEditor
+
 ## How to install
 
 **You need to get the SynEdit before this. I recomend you to use GetIt in Delphi to download and install the SynEdit automatically. You can get SynEdit here at GitHub too.**
