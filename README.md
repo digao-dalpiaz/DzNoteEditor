@@ -12,11 +12,11 @@ The NoteEditor supports syntax highlight using SynEdit component (this component
 
 ## How to install
 
-Add file NoteEditorReg.pas to a package and just Build.
+**You need to get the SynEdit before this. I recomend you to use GetIt in Delphi to download and install the SynEdit automatically. You can get SynEdit here at GitHub too.**
+
+After SynEdit already installed, add file NoteEditorReg.pas to a package and just Build.
 
 Supports Delphi XE2..Delphi 10.3 Rio
-
-**You need to get the SynEdit before this. I recomend you to use GetIt in Delphi to download and install the SynEdit automatically. You can get SynEdit here at GitHub too.**
 
 ## Syntax Supported Formats
 
