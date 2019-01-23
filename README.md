@@ -1,10 +1,10 @@
 # NoteEditor
 
-## Delphi Property Editor for TStrings supporting formatted languages with sintax highlight
+## Delphi Property Editor for TStrings supporting formatted languages with syntax highlight
 
 This property editor allows you to type texts in Delphi IDE when editing TStrings properties, overwriting the default TStrings editor form.
 
-The NoteEditor supports sintax highlight using SynEdit component (this component depends on SynEdit - you can get here at GitHub too).
+The NoteEditor supports syntax highlight using SynEdit component (this component depends on SynEdit - you can get here at GitHub too).
 
 ![Example Image](noteeditor_print.png?raw=true "Example Image")
 
