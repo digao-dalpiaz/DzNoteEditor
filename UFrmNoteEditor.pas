@@ -35,6 +35,9 @@ type
     Box: TPanel;
     LbTitle: TLabel;
     M: TSynEdit;
+    StatusBar: TStatusBar;
+    IL_Disab: TImageList;
+    Panel1: TPanel;
     ToolBar: TToolBar;
     BtnSyn: TToolButton;
     BtnPower: TToolButton;
@@ -57,7 +60,9 @@ type
     BtnExport: TToolButton;
     ToolButton21: TToolButton;
     BtnConfig: TToolButton;
-    StatusBar: TStatusBar;
+    ItemSpecialChars: TMenuItem;
+    Action_Save: TAction;
+    Action_OK: TAction;
     procedure MStatusChange(Sender: TObject; Changes: TSynStatusChanges);
     procedure BtnSaveClick(Sender: TObject);
     procedure BtnOKClick(Sender: TObject);
@@ -81,6 +86,8 @@ type
     procedure ItemWordWrapClick(Sender: TObject);
     procedure ItemColorsClick(Sender: TObject);
     procedure BtnCopyAllClick(Sender: TObject);
+    procedure ItemSpecialCharsClick(Sender: TObject);
+    procedure Action_OKExecute(Sender: TObject);
   private
     type
       TMenuItemSyn = class(TMenuItem)
@@ -242,7 +249,7 @@ begin
     if BtnPower.Down then
     begin
         BtnSyn.Enabled := True;
-        BtnSyn.ImageIndex := 0;
+        //BtnSyn.ImageIndex := 0;
 
         BtnPower.ImageIndex := 3;
 
@@ -250,7 +257,7 @@ begin
     end else
     begin
         BtnSyn.Enabled := False;
-        BtnSyn.ImageIndex := 1;
+        //BtnSyn.ImageIndex := 1;
 
         BtnPower.ImageIndex := 2;
         OnMenuItemSynClick(nil);
@@ -313,6 +320,9 @@ begin
       ItemWordWrap.Checked := RegReadBoolean(Reg, 'WordWrap', False);
       ItemWordWrapClick(nil);
 
+      ItemSpecialChars.Checked := RegReadBoolean(Reg, 'SpecialChars', False);
+      ItemSpecialCharsClick(nil);
+
       BtnPower.Down := RegReadBoolean(Reg, 'SynEnabled', False);
       BtnPowerClick(nil);
 
@@ -345,6 +355,7 @@ begin
 
       Reg.WriteBool('Code', ItemStyleCodeEditor.Checked);
       Reg.WriteBool('WordWrap', ItemWordWrap.Checked);
+      Reg.WriteBool('SpecialChars', ItemSpecialChars.Checked);
 
       SaveFormPos(Reg, Self); //this should be the last thing because changes the registry path
     finally
@@ -406,6 +417,8 @@ end;
 
 procedure TFrmNoteEditor.BtnSaveClick(Sender: TObject);
 begin
+    if not BtnSave.Enabled then Exit;
+
     if (M.Text = '') then
       PStr.Clear
     else
@@ -417,7 +430,7 @@ end;
 
 procedure TFrmNoteEditor.BtnOKClick(Sender: TObject);
 begin
-    if BtnSave.Enabled then BtnSaveClick(nil);
+    BtnSaveClick(nil);
 end;
 
 procedure TFrmNoteEditor.BtnCutClick(Sender: TObject);
@@ -551,6 +564,14 @@ begin
     M.Gutter.ZeroStart := ItemStyleNormal.Checked;
 end;
 
+procedure TFrmNoteEditor.ItemSpecialCharsClick(Sender: TObject);
+begin
+    if ItemSpecialChars.Checked then
+      M.Options := M.Options + [eoShowSpecialChars]
+    else
+      M.Options := M.Options - [eoShowSpecialChars];
+end;
+
 procedure TFrmNoteEditor.ItemWordWrapClick(Sender: TObject);
 begin
     M.WordWrap := ItemWordWrap.Checked;
@@ -638,6 +659,11 @@ begin
     finally
       D.Free;
     end;
+end;
+
+procedure TFrmNoteEditor.Action_OKExecute(Sender: TObject);
+begin
+    BtnOK.Click;
 end;
 
 end.
