@@ -14,9 +14,9 @@ All the configurations and customizations are saved at system Registry: HKEY_CUR
 
 ## How to install
 
-**You need to get the SynEdit before this. I recomend you to use GetIt in Delphi to download and install the SynEdit automatically. You can get SynEdit here at GitHub too.**
+**You need to get the SynEdit before this. Please, download it here: https://github.com/SynEdit/SynEdit. Do not use TurboPack SynEdit, because it has some diferences.**
 
-After SynEdit already installed, add file NoteEditorReg.pas to a package and just Build.
+After SynEdit already installed, load NoteEditorPackage in Delphi, do a Build and Install.
 
 Supports Delphi XE2..Delphi 10.3 Rio
 
