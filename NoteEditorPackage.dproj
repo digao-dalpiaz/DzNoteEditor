@@ -101,6 +101,7 @@
         <DCC_CBuilderOutput>None</DCC_CBuilderOutput>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_DcuOutput>Lib\</DCC_DcuOutput>
     </PropertyGroup>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
