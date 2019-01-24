@@ -106,6 +106,7 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="Notepad.dcr"/>
         <DCCReference Include="rtl.dcp"/>
         <DCCReference Include="designide.dcp"/>
         <DCCReference Include="dbrtl.dcp"/>
@@ -113,20 +114,17 @@
         <DCCReference Include="NoteEditorReg.pas"/>
         <DCCReference Include="UFrmNoteEditor.pas">
             <Form>FrmNoteEditor</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmNoteEditorColors.pas">
             <Form>FrmNoteEditorColors</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmNoteEditorConfig.pas">
             <Form>FrmNoteEditorConfig</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="UFrmNoteEditorFind.pas">
             <Form>FrmNoteEditorFind</Form>
-            <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Notepad.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -12,17 +12,27 @@ type
     function GetValue: String; override;
   end;
 
+  TNotepadPropDbClick = class(TDefaultEditor)
+  public
+    procedure EditProperty(const Prop: IProperty; var Continue: Boolean); override;
+  end;
+
 procedure Register;
 
 implementation
 
 uses System.Classes, Data.DB, Vcl.Forms, System.SysUtils,
- UFrmNoteEditor;
+ UFrmNoteEditor, Notepad;
 
 procedure Register;
 begin
+  RegisterComponents('Digao', [TNotepad]);
+
   RegisterPropertyEditor(TypeInfo(TStrings), nil, '', TNoteEditorStringsEdit);
   RegisterPropertyEditor(TypeInfo(TStrings), TDataSet, 'SQL', TNoteEditorStringsEdit);
+  RegisterPropertyEditor(TypeInfo(TStrings), TNotepad, 'Lines', TNoteEditorStringsEdit);
+
+  RegisterComponentEditor(TNotepad, TNotepadPropDbClick);
 end;
 
 //
@@ -61,6 +71,17 @@ begin
     if X = 1 then
       Result := '(1 line)' else
       Result := Format('(%d lines)', [X]);
+end;
+
+//
+
+procedure TNotepadPropDbClick.EditProperty(const Prop: IProperty; var Continue: Boolean);
+begin
+    if Prop.GetName = 'Lines' then
+    begin
+        Prop.Edit;
+        Continue := False;
+    end;
 end;
 
 end.

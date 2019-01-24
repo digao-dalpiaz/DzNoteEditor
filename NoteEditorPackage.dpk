@@ -1,6 +1,7 @@
 package NoteEditorPackage;
 
 {$R *.res}
+{$R 'Notepad.dcr'}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
@@ -38,6 +39,7 @@ contains
   UFrmNoteEditor in 'UFrmNoteEditor.pas' {FrmNoteEditor},
   UFrmNoteEditorColors in 'UFrmNoteEditorColors.pas' {FrmNoteEditorColors},
   UFrmNoteEditorConfig in 'UFrmNoteEditorConfig.pas' {FrmNoteEditorConfig},
-  UFrmNoteEditorFind in 'UFrmNoteEditorFind.pas' {FrmNoteEditorFind};
+  UFrmNoteEditorFind in 'UFrmNoteEditorFind.pas' {FrmNoteEditorFind},
+  Notepad in 'Notepad.pas';
 
 end.
