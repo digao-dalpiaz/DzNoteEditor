@@ -28,6 +28,12 @@ Supports Delphi XE2..Delphi 10.3 Rio
 
 > Others shortcuts are described on each hint of toolbar buttons
 
+## TNotepad Component
+
+In this package there is a bonus non-visual component called TNotepad. This is a simple component having a TStrings published property. So you can store at DFM any text you want. This is very useful to store text data in Forms and DataModules.
+
+And, of course, you can simply double-click the component and will open the NoteEditor!
+
 ## Syntax Supported Formats
 
 - 68HC11 Assembler
