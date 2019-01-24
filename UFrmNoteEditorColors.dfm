@@ -279,13 +279,11 @@ object FrmNoteEditorColors: TFrmNoteEditorColors
     Font.Style = []
     TabOrder = 3
     TabStop = False
-    CodeFolding.GutterShapeSize = 11
     CodeFolding.CollapsedLineColor = clGrayText
     CodeFolding.FolderBarLinesColor = clGrayText
+    CodeFolding.ShowCollapsedLine = False
     CodeFolding.IndentGuidesColor = clGray
     CodeFolding.IndentGuides = True
-    CodeFolding.ShowCollapsedLine = False
-    CodeFolding.ShowHintMark = True
     UseCodeFolding = False
     Gutter.Font.Charset = DEFAULT_CHARSET
     Gutter.Font.Color = clWindowText
