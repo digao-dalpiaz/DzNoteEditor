@@ -18,6 +18,8 @@ All the configurations and customizations are saved at system Registry: HKEY_CUR
 
 After SynEdit already installed, load NoteEditorPackage in Delphi, do a Build and Install.
 
+> Add sub-path Lib to the Library paths at Tool\Options.
+
 Supports Delphi XE2..Delphi 10.3 Rio
 
 ## Hidden Shortcuts
