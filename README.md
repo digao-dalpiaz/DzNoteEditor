@@ -2,6 +2,8 @@
 
 ## Delphi Property Editor for TStrings supporting formatted languages with syntax highlight
 
+![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE2..10.3%20Rio-blue.svg)
+
 This property editor allows you to type texts in Delphi IDE when editing TStrings properties, overwriting the default TStrings editor form.
 
 The NoteEditor supports syntax highlight using SynEdit component (this component depends on SynEdit - you can get here at GitHub too).
@@ -18,7 +20,7 @@ All the configurations and customizations are saved at system Registry: HKEY_CUR
 
 After SynEdit already installed, load NoteEditorPackage in Delphi, do a Build and Install.
 
-> Add sub-path Lib to the Library paths at Tool\Options.
+> Add sub-path "Lib" to the Library paths at Tool\Options.
 
 Supports Delphi XE2..Delphi 10.3 Rio
 
