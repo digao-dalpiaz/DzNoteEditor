@@ -6,6 +6,8 @@ uses System.Classes;
 
 type TNotepad = class(TComponent)
   private
+    FAbout: String;
+
     S: TStrings;
     procedure SetLines(const Value: TStrings);
 
@@ -24,6 +26,7 @@ type TNotepad = class(TComponent)
     function Has(const A: String): Boolean;
     function AddIfNotEx(const A: String): Boolean;
   published
+    property About: String read FAbout;
     property Lines: TStrings read S write SetLines;
   end;
 
@@ -32,6 +35,9 @@ implementation
 constructor TNotepad.Create(AOwner: TComponent);
 begin
     inherited;
+
+    FAbout := 'Digão Dalpiaz / Version 3.0';
+
     S := TStringList.Create;
 end;
 
