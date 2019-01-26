@@ -63,6 +63,7 @@ type
     ItemSpecialChars: TMenuItem;
     Action_Save: TAction;
     Action_OK: TAction;
+    BtnHelp: TToolButton;
     procedure MStatusChange(Sender: TObject; Changes: TSynStatusChanges);
     procedure BtnSaveClick(Sender: TObject);
     procedure BtnOKClick(Sender: TObject);
@@ -88,6 +89,7 @@ type
     procedure BtnCopyAllClick(Sender: TObject);
     procedure ItemSpecialCharsClick(Sender: TObject);
     procedure Action_OKExecute(Sender: TObject);
+    procedure BtnHelpClick(Sender: TObject);
   private
     type
       TMenuItemSyn = class(TMenuItem)
@@ -118,7 +120,7 @@ implementation
 
 uses
   Vcl.Graphics, System.SysUtils, System.StrUtils,
-  Vcl.ExtDlgs, Vcl.Clipbrd, Vcl.Dialogs,
+  Vcl.ExtDlgs, Vcl.Clipbrd, Vcl.Dialogs, Winapi.ShellAPI,
   UFrmNoteEditorFind, UFrmNoteEditorConfig, UFrmNoteEditorColors;
 
 const REG_PATH = 'Digao\NoteEditor';
@@ -664,6 +666,11 @@ end;
 procedure TFrmNoteEditor.Action_OKExecute(Sender: TObject);
 begin
     BtnOK.Click;
+end;
+
+procedure TFrmNoteEditor.BtnHelpClick(Sender: TObject);
+begin
+    ShellExecute(0, '', 'https://github.com/digao-dalpiaz/NoteEditor', '', '', SW_SHOWNORMAL);
 end;
 
 end.
