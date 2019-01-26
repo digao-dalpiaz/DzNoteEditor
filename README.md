@@ -8,9 +8,9 @@ This property editor allows you to type texts in Delphi IDE when editing TString
 
 The NoteEditor supports syntax highlight using SynEdit component (this component depends on SynEdit - you can get here at GitHub too).
 
-![Example Image](noteeditor_print.png?raw=true "Example Image")
+![Example Image](images/noteeditor_print.png)
 
-![Example Colors](noteeditor_colors.png?raw=true "Example Colors")
+![Example Colors](images/noteeditor_colors.png)
 
 All the configurations and customizations are saved at system Registry: HKEY_CURRENT_USER\Digao\NoteEditor
 
