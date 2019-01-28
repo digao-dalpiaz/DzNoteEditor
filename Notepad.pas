@@ -1,3 +1,13 @@
+{------------------------------------------------------------------------------
+TNotepad component
+Developed by Rodrigo Depiné Dalpiaz (digão dalpiaz)
+Non visual component to store TStrings at DFM file
+
+https://github.com/digao-dalpiaz/NoteEditor
+
+Please, read the documentation at GitHub link.
+------------------------------------------------------------------------------}
+
 unit Notepad;
 
 interface

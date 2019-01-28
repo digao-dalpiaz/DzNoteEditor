@@ -1,3 +1,13 @@
+{------------------------------------------------------------------------------
+NoteEditor property editor
+Developed by Rodrigo Depiné Dalpiaz (digão dalpiaz)
+Property Editor to TStrings class integrated in Delphi IDE
+
+https://github.com/digao-dalpiaz/NoteEditor
+
+Please, read the documentation at GitHub link.
+------------------------------------------------------------------------------}
+
 unit UFrmNoteEditor;
 
 interface
