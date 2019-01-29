@@ -38,6 +38,8 @@ In this package there is a bonus non-visual component called TNotepad. This is a
 
 And, of course, you can simply double-click the component and will open the NoteEditor!
 
+![Notepad Usage](images/notepad_usage.png)
+
 ## Syntax Supported Formats
 
 - 68HC11 Assembler
