@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AC83EAF9-FE89-4179-BBA0-55D46A5F9940}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="NotepadPackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="NoteEditorPackage.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="NotepadPackage">
+        <MSBuild Projects="NotepadPackage.dproj"/>
+    </Target>
+    <Target Name="NotepadPackage:Clean">
+        <MSBuild Projects="NotepadPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NotepadPackage:Make">
+        <MSBuild Projects="NotepadPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="NoteEditorPackage">
+        <MSBuild Projects="NoteEditorPackage.dproj"/>
+    </Target>
+    <Target Name="NoteEditorPackage:Clean">
+        <MSBuild Projects="NoteEditorPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="NoteEditorPackage:Make">
+        <MSBuild Projects="NoteEditorPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="NotepadPackage;NoteEditorPackage"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="NotepadPackage:Clean;NoteEditorPackage:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="NotepadPackage:Make;NoteEditorPackage:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

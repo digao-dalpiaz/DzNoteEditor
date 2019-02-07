@@ -1,6 +1,7 @@
-package NoteEditorPackage;
+package NotepadPackage;
 
 {$R *.res}
+{$R 'Notepad.dcr'}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
 {$ASSERTIONS ON}
@@ -25,21 +26,13 @@ package NoteEditorPackage;
 {$IMAGEBASE $400000}
 {$DEFINE RELEASE}
 {$ENDIF IMPLICITBUILDING}
-{$DESIGNONLY}
+{$RUNONLY}
 {$IMPLICITBUILD ON}
 
 requires
-  rtl,
-  designide,
-  dbrtl,
-  SynEdit_R,
-  NotepadPackage;
+  rtl;
 
 contains
-  NoteEditorReg in 'NoteEditorReg.pas',
-  UFrmNoteEditor in 'UFrmNoteEditor.pas' {FrmNoteEditor},
-  UFrmNoteEditorColors in 'UFrmNoteEditorColors.pas' {FrmNoteEditorColors},
-  UFrmNoteEditorConfig in 'UFrmNoteEditorConfig.pas' {FrmNoteEditorConfig},
-  UFrmNoteEditorFind in 'UFrmNoteEditorFind.pas' {FrmNoteEditorFind};
+  Notepad in 'Notepad.pas';
 
 end.
