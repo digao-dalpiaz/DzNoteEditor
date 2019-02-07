@@ -32,7 +32,7 @@ All the configurations and customizations are saved at system Registry: HKEY_CUR
 
 ## How to install
 
-**You need to get the SynEdit before this. Please, download it here: https://github.com/SynEdit/SynEdit. Do not use TurboPack SynEdit, because it has some diferences.**
+**You need to get the SynEdit before this. Please, download it here: https://github.com/SynEdit/SynEdit. Do not use TurboPack SynEdit, because it has some differences.**
 
 After SynEdit already installed, do the following:
 
