@@ -3,6 +3,22 @@
 ## Delphi Property Editor for TStrings supporting formatted languages with syntax highlight
 
 ![Delphi Supported Versions](https://img.shields.io/badge/Delphi%20Supported%20Versions-XE2..10.3%20Rio-blue.svg)
+![Platforms](https://img.shields.io/badge/Platforms-Win32%20and%20Win64-red.svg)
+
+- [What's New](#whats-new)
+- [Component Description](#component-description)
+- [How to install](#how-to-install)
+- [Hidden Shortcuts](#hidden-shortcuts)
+- [TNotepad Component](#tnotepad-component)
+- [Syntax Supported Formats](#syntax-supported-formats)
+
+## What's New
+
+- 02/07/2019
+
+   - Add Win64 support (library folders changed!) :warning:
+
+## Component Description
 
 This property editor allows you to type texts in Delphi IDE when editing TStrings properties, overwriting the default TStrings editor form.
 
@@ -18,9 +34,19 @@ All the configurations and customizations are saved at system Registry: HKEY_CUR
 
 **You need to get the SynEdit before this. Please, download it here: https://github.com/SynEdit/SynEdit. Do not use TurboPack SynEdit, because it has some diferences.**
 
-After SynEdit already installed, load NoteEditorPackage in Delphi, do a Build and Install.
+After SynEdit already installed, do the following:
 
-> Add sub-path "Lib" to the Library paths at Tools\Options.
+1. Open **NoteEditor.groupproj** in the Delphi.
+
+2. Ensure **Win32** Platform and **Release** config are selected at both packages.
+
+3. Right-click at root item in the tree and choose **Build All**.
+
+4. If you want to use 64 bit platform, select this platform at NotepadPackage and do a new Build in this package.
+
+5. Right-click at **NoteEditorPackage** and choose **Install**.
+
+6. Add "Win32\Release" sub folder to Delphi Library Path (Tools\Options), on 32-bit option. If you will use 64 bit platform, add "Win64\Release" sub folder on 64-bit option.
 
 Supports Delphi XE2..Delphi 10.3 Rio
 
