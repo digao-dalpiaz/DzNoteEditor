@@ -12,6 +12,7 @@
 - [Hidden Shortcuts](#hidden-shortcuts)
 - [TNotepad Component](#tnotepad-component)
 - [Syntax Supported Formats](#syntax-supported-formats)
+- [CnPack CnWizards conflict](#cnpack-cnwizards-conflict)
 
 ## What's New
 
@@ -138,3 +139,18 @@ And, of course, you can simply double-click the component and will open the Note
 - x86 Assembly
 
 Note: This list is based on last version of SynEdit (date: 01/23/2019). You may have a different list if you install another version. The list is automatically created based on installed syntax highlighters of SynEdit (auto-detected).
+
+## CnPack CnWizards conflict
+
+If you are using CnWizards, you need to deactivate TStrings property editor because CnWizars overwrites my property editor.
+
+Follow stes bellow:
+
+1. Go to the CnPack menu into Delphi.
+2. Choose Options.
+3. Go to the Property Editor tab.
+4. Select String List Editor item.
+5. Uncheck "Enabled" on right panel.
+6. Click OK.
+
+To ensure this configuration take effect, please close and re-open Delphi.
