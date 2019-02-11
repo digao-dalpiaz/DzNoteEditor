@@ -1,0 +1,16 @@
+select
+  ID,
+  Name,
+  Phone,
+  Address,
+  Account,
+  substring(Group, 2, 1),
+
+  case Kind when /* convert kind column */
+    '1' then 'Normal'
+    '2' then 'Special'
+  end
+
+from Customers
+
+where Account > 100000 /* only big accounts */
