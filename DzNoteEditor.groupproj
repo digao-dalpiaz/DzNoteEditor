@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{AC83EAF9-FE89-4179-BBA0-55D46A5F9940}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DzNotepad.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DzNoteEditorDesign.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DzNotepad">
+        <MSBuild Projects="DzNotepad.dproj"/>
+    </Target>
+    <Target Name="DzNotepad:Clean">
+        <MSBuild Projects="DzNotepad.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DzNotepad:Make">
+        <MSBuild Projects="DzNotepad.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DzNoteEditorDesign">
+        <MSBuild Projects="DzNoteEditorDesign.dproj"/>
+    </Target>
+    <Target Name="DzNoteEditorDesign:Clean">
+        <MSBuild Projects="DzNoteEditorDesign.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DzNoteEditorDesign:Make">
+        <MSBuild Projects="DzNoteEditorDesign.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DzNotepad;DzNoteEditorDesign"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DzNotepad:Clean;DzNoteEditorDesign:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DzNotepad:Make;DzNoteEditorDesign:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

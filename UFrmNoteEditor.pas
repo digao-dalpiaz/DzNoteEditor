@@ -1,9 +1,9 @@
 {------------------------------------------------------------------------------
-NoteEditor property editor
+DzNoteEditor property editor
 Developed by Rodrigo Depiné Dalpiaz (digão dalpiaz)
 Property Editor to TStrings class integrated in Delphi IDE
 
-https://github.com/digao-dalpiaz/NoteEditor
+https://github.com/digao-dalpiaz/DzNoteEditor
 
 Please, read the documentation at GitHub link.
 ------------------------------------------------------------------------------}
@@ -680,7 +680,7 @@ end;
 
 procedure TFrmNoteEditor.BtnHelpClick(Sender: TObject);
 begin
-    ShellExecute(0, '', 'https://github.com/digao-dalpiaz/NoteEditor', '', '', SW_SHOWNORMAL);
+    ShellExecute(0, '', 'https://github.com/digao-dalpiaz/DzNoteEditor', '', '', SW_SHOWNORMAL);
 end;
 
 end.
