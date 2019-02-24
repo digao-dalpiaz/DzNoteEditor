@@ -144,7 +144,7 @@ Note: This list is based on last version of SynEdit (date: 01/23/2019). You may 
 
 If you are using CnWizards, you need to deactivate TStrings property editor because CnWizars overwrites my property editor.
 
-Follow stes bellow:
+Follow steps bellow:
 
 1. Go to the CnPack menu into Delphi.
 2. Choose Options.
