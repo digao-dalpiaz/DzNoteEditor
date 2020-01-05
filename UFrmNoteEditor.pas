@@ -131,7 +131,8 @@ implementation
 uses
   Vcl.Graphics, System.SysUtils, System.StrUtils,
   Vcl.ExtDlgs, Vcl.Clipbrd, Vcl.Dialogs, Winapi.ShellAPI,
-  UFrmNoteEditorFind, UFrmNoteEditorConfig, UFrmNoteEditorColors;
+  UFrmNoteEditorFind, UFrmNoteEditorConfig, UFrmNoteEditorColors,
+  System.Generics.Defaults, System.Generics.Collections;
 
 const REG_PATH = 'Digao\NoteEditor';
 
@@ -198,39 +199,67 @@ end;
 
 //
 
+type TMyHC = class
+  ID, Caption: String;
+  &Class: TSynCustomHighlighterClass;
+end;
 procedure TFrmNoteEditor.CreateSyns(const SavedName: String);
 var C: TSynCustomHighlighterClass;
     MI: TMenuItemSyn;
     L: TSynHighlighterList;
     I, Count: Integer;
+    MyLst: TList<TMyHC>;
+    HC: TMyHC;
 begin
     L := GetPlaceableHighlighters;
 
-    Count := 0;
-
-    for I := 0 to L.Count-1 do
-    begin
-      C := L[I];
-
-      MI := TMenuItemSyn.Create(Self);
-      MI.SynClass := C;
-      MI.LangID := C.GetLanguageName;
-      MI.LangDesc := C.GetFriendlyLanguageName;
-      MI.PathReg := REG_PATH+'\Languages\'+MI.LangID;
-
-      MenuSyn.Items.Add(MI);
-      MI.Caption := MI.LangDesc;
-      MI.OnClick := OnMenuItemSynClick;
-      MI.RadioItem := True; //set bullet graphic and auto-uncheck when set any other on same group
-
-      if MI.LangID = SavedName then LastSynMenuItem := MI;
-
-      if Count>20 then
+    MyLst := TList<TMyHC>.Create;
+    try
+      for I := 0 to L.Count-1 do
       begin
-        MI.Break := mbBarBreak;
-        Count := 0;
+        C := L[I];
+
+        HC := TMyHC.Create;
+        MyLst.Add(HC);
+
+        HC.&Class := C;
+        HC.ID := C.GetLanguageName;
+        HC.Caption := C.GetFriendlyLanguageName;
       end;
-      Inc(Count);
+
+      MyLst.Sort(TComparer<TMyHC>.Construct(
+        function(const Item1, Item2: TMyHC): Integer
+        begin
+          Result := CompareText(Item1.Caption, Item2.Caption);
+        end)
+      );
+
+      Count := 0;
+
+      for HC in MyLst do
+      begin
+        MI := TMenuItemSyn.Create(Self);
+        MI.SynClass := HC.&Class;
+        MI.LangID := HC.ID;
+        MI.LangDesc := HC.Caption;
+        MI.PathReg := REG_PATH+'\Languages\'+MI.LangID;
+
+        MenuSyn.Items.Add(MI);
+        MI.Caption := MI.LangDesc;
+        MI.OnClick := OnMenuItemSynClick;
+        MI.RadioItem := True; //set bullet graphic and auto-uncheck when set any other on same group
+
+        if MI.LangID = SavedName then LastSynMenuItem := MI;
+
+        if Count>20 then
+        begin
+          MI.Break := mbBarBreak;
+          Count := 0;
+        end;
+        Inc(Count);
+      end;
+    finally
+      MyLst.Free;
     end;
 end;
 

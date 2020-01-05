@@ -16,6 +16,10 @@
 
 ## What's New
 
+- 01/04/2020
+
+   - Alphabetical order in syntax highlight list.
+
 - 02/11/2019
 
    - Include auto install app
@@ -101,6 +105,7 @@ And, of course, you can simply double-click the component and will open the Note
 - Galaxy
 - Gembase
 - General
+- GLSL
 - Go
 - GW-TEL
 - Haskell
@@ -137,6 +142,8 @@ And, of course, you can simply double-click the component and will open the Note
 - Visual Basic
 - Vrml97
 - x86 Assembly
+- x86 Assembly MASM
+- XML
 
 Note: This list is based on last version of SynEdit (date: 01/23/2019). You may have a different list if you install another version. The list is automatically created based on installed syntax highlighters of SynEdit (auto-detected).
 

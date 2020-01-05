@@ -2,7 +2,7 @@
     <PropertyGroup>
         <ProjectGuid>{FE50CC53-5093-45C6-8A8F-F2FC90FA0CF3}</ProjectGuid>
         <MainSource>DzNotepad.dpk</MainSource>
-        <ProjectVersion>18.5</ProjectVersion>
+        <ProjectVersion>18.6</ProjectVersion>
         <FrameworkType>None</FrameworkType>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Release</Config>
