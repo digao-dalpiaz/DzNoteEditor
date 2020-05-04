@@ -16,6 +16,10 @@
 
 ## What's New
 
+- 05/03/2020
+
+   - Updated CompInstall to version 1.2
+
 - 01/04/2020
 
    - Alphabetical order in syntax highlight list.
