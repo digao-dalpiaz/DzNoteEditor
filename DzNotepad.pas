@@ -1,6 +1,6 @@
 {------------------------------------------------------------------------------
 TDzNotepad component
-Developed by Rodrigo Depiné Dalpiaz (digão dalpiaz)
+Developed by Rodrigo Depine Dalpiaz (digao dalpiaz)
 Non visual component to store TStrings at DFM file
 
 https://github.com/digao-dalpiaz/DzNoteEditor
@@ -46,7 +46,7 @@ constructor TDzNotepad.Create(AOwner: TComponent);
 begin
     inherited;
 
-    FAbout := 'Digão Dalpiaz / Version 1.0';
+    FAbout := 'Digao Dalpiaz / Version 1.1';
 
     S := TStringList.Create;
 end;
