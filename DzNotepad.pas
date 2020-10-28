@@ -46,7 +46,7 @@ constructor TDzNotepad.Create(AOwner: TComponent);
 begin
     inherited;
 
-    FAbout := 'Digao Dalpiaz / Version 1.1';
+    FAbout := 'Digao Dalpiaz / Version 1.2';
 
     S := TStringList.Create;
 end;

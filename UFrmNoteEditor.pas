@@ -1,6 +1,6 @@
 {------------------------------------------------------------------------------
 DzNoteEditor property editor
-Developed by Rodrigo Depiné Dalpiaz (digão dalpiaz)
+Developed by Rodrigo Depine Dalpiaz (digao dalpiaz)
 Property Editor to TStrings class integrated in Delphi IDE
 
 https://github.com/digao-dalpiaz/DzNoteEditor
@@ -13,9 +13,10 @@ unit UFrmNoteEditor;
 interface
 
 uses Vcl.Forms, System.Classes, System.Actions, Vcl.ActnList,
-  SynEditMiscClasses, SynEditSearch, Vcl.Menus, System.ImageList, Vcl.ImgList,
+  SynEditMiscClasses, SynEditSearch, Vcl.Menus, Vcl.ImgList,
   Vcl.Controls, Vcl.ComCtrls, Vcl.ToolWin, SynEdit, Vcl.StdCtrls, Vcl.Buttons,
   Vcl.ExtCtrls,
+  {$IF CompilerVersion >= 29}System.ImageList, {$IFEND}
   //
   SynEditHighlighter, SynEditTypes,
   Winapi.Windows, Winapi.Messages,
