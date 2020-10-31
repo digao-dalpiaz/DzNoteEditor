@@ -42,11 +42,13 @@ type TDzNotepad = class(TComponent)
 
 implementation
 
+const STR_VERSION = '1.3';
+
 constructor TDzNotepad.Create(AOwner: TComponent);
 begin
     inherited;
 
-    FAbout := 'Digao Dalpiaz / Version 1.2';
+    FAbout := 'Digao Dalpiaz / Version '+STR_VERSION;
 
     S := TStringList.Create;
 end;
