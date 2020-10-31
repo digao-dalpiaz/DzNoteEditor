@@ -1,3 +1,5 @@
+![Preview](images/preview.png)
+
 # DzNoteEditor
 
 ## Delphi Property Editor for TStrings supporting formatted languages with syntax highlight
