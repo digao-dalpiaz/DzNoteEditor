@@ -16,27 +16,27 @@ uses System.Classes;
 
 type TDzNotepad = class(TComponent)
   private
-    FAbout: String;
+    FAbout: string;
 
     S: TStrings;
     procedure SetLines(const Value: TStrings);
 
     function GetCount: Integer;
-    function GetText: String;
+    function GetText: string;
   public
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
 
-    property Text: String read GetText;
+    property Text: string read GetText;
     property Count: Integer read GetCount;
 
-    procedure Add(const A: String);
+    procedure Add(const A: string);
     procedure Sort;
     procedure Clear;
-    function Has(const A: String): Boolean;
-    function AddIfNotEx(const A: String): Boolean;
+    function Has(const A: string): Boolean;
+    function AddIfNotEx(const A: string): Boolean;
   published
-    property About: String read FAbout;
+    property About: string read FAbout;
     property Lines: TStrings read S write SetLines;
   end;
 
@@ -74,12 +74,12 @@ begin
     TStringList(S).Sort;
 end;
 
-procedure TDzNotepad.Add(const A: String);
+procedure TDzNotepad.Add(const A: string);
 begin
     S.Add(A);
 end;
 
-function TDzNotepad.GetText: String;
+function TDzNotepad.GetText: string;
 begin
     Result := S.Text;
 end;
@@ -89,12 +89,12 @@ begin
     S.Clear;
 end;
 
-function TDzNotepad.Has(const A: String): Boolean;
+function TDzNotepad.Has(const A: string): Boolean;
 begin
     Result := ( S.IndexOf(A) <> (-1) );
 end;
 
-function TDzNotepad.AddIfNotEx(const A: String): Boolean;
+function TDzNotepad.AddIfNotEx(const A: string): Boolean;
 begin
     Result := not Has(A);
     if Result then Add(A);

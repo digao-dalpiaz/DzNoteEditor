@@ -9,7 +9,7 @@ type
   public
     procedure Edit; override;
     function GetAttributes: TPropertyAttributes; override;
-    function GetValue: String; override;
+    function GetValue: string; override;
   end;
 
   TDzNotepadPropDbClick = class(TDefaultEditor)
@@ -59,7 +59,7 @@ begin
     Result := [paDialog, paReadOnly];
 end;
 
-function TDzNoteEditorStringsEdit.GetValue: String;
+function TDzNoteEditorStringsEdit.GetValue: string;
 var S: TStrings;
     X: Integer;
 begin
