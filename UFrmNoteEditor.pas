@@ -16,7 +16,7 @@ uses Vcl.Forms, System.Classes, System.Actions, Vcl.ActnList,
   SynEditMiscClasses, SynEditSearch, Vcl.Menus, Vcl.ImgList,
   Vcl.Controls, Vcl.ComCtrls, Vcl.ToolWin, SynEdit, Vcl.StdCtrls, Vcl.Buttons,
   Vcl.ExtCtrls,
-  {$IF CompilerVersion >= 29}System.ImageList, {$IFEND}
+  {$IF CompilerVersion >= 29}System.ImageList, {$ENDIF}
   //
   SynEditHighlighter, SynEditTypes,
   Winapi.Windows, Winapi.Messages,
