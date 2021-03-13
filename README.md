@@ -21,6 +21,10 @@
 
 ## What's New
 
+- 03/13/2021 (Version 1.6)
+
+   - Removed CompInstall.exe from component sources due to AV false positive warning (now you can get it directly from CompInstall repository).
+
 - 02/01/2021 (Version 1.5)
 
    - Removed Delphi XE2 from the list of environments as it was never possible to compile in this version.
@@ -79,7 +83,9 @@ After SynEdit already installed, do the following:
 
 ### Auto install
 
-Close Delphi IDE and run **CompInstall.exe** app to auto install component into Delphi.
+1. Download Component Installer from: https://github.com/digao-dalpiaz/CompInstall/releases/latest
+2. Put **CompInstall.exe** into the component repository sources folder.
+3. Close Delphi IDE and run **CompInstall.exe** app.
 
 ### Manual install
 
