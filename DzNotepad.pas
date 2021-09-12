@@ -42,7 +42,7 @@ type TDzNotepad = class(TComponent)
 
 implementation
 
-const STR_VERSION = '1.6';
+const STR_VERSION = '1.7';
 
 constructor TDzNotepad.Create(AOwner: TComponent);
 begin
