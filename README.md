@@ -110,7 +110,7 @@ After SynEdit already installed, do the following:
 
 6. Add "Win32\Release" sub folder to Delphi Library Path (Tools\Options), on 32-bit option. If you will use 64 bit platform, add "Win64\Release" sub folder on 64-bit option.
 
-Supports Delphi XE3..Delphi 10.4
+Supports Delphi XE3..Delphi 11
 
 ## Hidden Shortcuts
 
